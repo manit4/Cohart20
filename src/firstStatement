@@ -1,0 +1,23 @@
+//----------------------------#Assignment1-----------------
+
+//title-> It is an Online Book-Shop
+
+//User Stories:
+
+//1) As a User, I should be able to enter into the application using my user name and password
+//2) As a User, my username should be checked and verified
+//3) As a User, if valid I should be able to see all my books(new, favorite and completed)
+//4) As a User, I should be able to select any book by entering book-id
+
+//points to notice or instructions:
+
+//The User class should have following attributes:
+//username, emailId, password, newBooks(Array of type Book), favourite(Array of type Book), completedBooks(Array of type Book)
+
+//The Book class should have these attributes:
+//bookName, authorName, description, bookId
+
+//user arrays to store books information in user class.
+//create User and Book as POJO.
+//create Main class to define all the functionality related methods.
+//Use Recursive menu to display all the options and inputs.

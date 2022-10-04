@@ -1,3 +1,132 @@
+class Car {
+	void steeringWheel(){
+		System.out.println("inside steering Wheel of car..");
+	}
+}
+
+class Polo extends Car {
+	
+	void abs() {
+		System.out.println("inside abs of Polo..");
+	}
+}
+
+class PoloGT extends Polo {
+	
+	void roadster() {
+		System.out.println("inside roadster of PoloGT..");
+	}
+}
+
+
+class Main {
+	
+	public static void main(String[] args) {
+		
+		Polo p1 = new Polo();
+		Polo p2 = new Polo();
+		Polo p3 = new Polo();
+		Polo p4 = new Polo();
+		Polo p100 = new Polo();
+		Polo p101 = new Polo();
+		Polo p102 = new Polo();
+		
+		PoloGT gt1 = new PoloGT();
+		PoloGT gt2 = new PoloGT();
+		
+		gt1.abs();      gt1.steeringWheel();     gt1.roadster();
+				
+		Car c = new PoloGT();//This is legal since I am holding hold the object of GrandChild in the reference variable of GrandParent
+		Polo p = new PoloGT();//This is also legal since I am holding the object of Child in the reference variable of Parent class 
+				
+	}
+}
+
+
+
+//class Car {
+//
+//	void steeringWheel() {
+//		System.out.println("inside steering Wheel of Car...");
+//	}
+//}
+//
+//class Polo extends Car {
+//
+//	void abs() {
+//		System.out.println("inside abs of Polo..");
+//	}
+//}
+//
+//public class SecondOOPS {
+//
+//	public static void main(String[] args) {
+
+//		Car c1 = new Car();
+//		Car c2 = new Car();
+//		Car c3 = new Car();
+//		
+//		Polo p1 = new Polo();
+//		Polo p2 = new Polo();
+//		Polo p3 = new Polo();
+//		
+//		Car c[] = {c1, c2, c3};
+//		Polo p[] = {p1, p2, p3};
+		
+//		Car c[] = { new Car(), new Car(), new Car()};
+//		Polo p[] = { new Polo(), new Polo(), new Polo()};
+		
+//		Car cars[] = {new Car(), new Polo()};
+//		
+//		
+//		
+//	}
+//}
+
+
+
+//class Car {
+//
+//	void steeringWheel() {
+//		System.out.println("inside steering Wheel of Car...");
+//	}
+//}
+//
+//class Polo extends Car {
+//
+//	void abs() {
+//		System.out.println("inside abs of Polo..");
+//	}
+//}
+//
+//public class SecondOOPS {
+//
+//	public static void main(String[] args) {
+//
+//		Car c = new Polo();
+//		c.steeringWheel();     
+//		c.abs(); //This statement is illegal since I have reference variable of parent class holding
+//				//object of child class. The reason is, since I m acalling abs() on reference variable
+//				//of parent class which is c so it will check the called method "abs()" in the parent 
+//				//class based on the reference variable type not the object type....
+//	}
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
