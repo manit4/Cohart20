@@ -1,55 +1,274 @@
-class Human {
-	
-	int mascularStrength = 50;
-	
-	int gyming() {
-		mascularStrength++;
+class Car {
 
-		if(mascularStrength > 55) {
-			return 40;
-		}
-		else {
-			return 50;
-		}
-	}		
+	int i = 20;
+
+	void steeringWheel() {
+		System.out.println("inside steering Wheel of Car..."+i);
+	}
 }
 
-class Society {
-	
-	int fund;
-	String name;
-	String secretaryName;
+class Polo extends Car {
+
+	int j = 10;
+
+	void abs() {
+		System.out.println("inside abs of Polo.."+i);
+		System.out.println(j);//You can use variables of parent class anywhere in the child class...
+	}
 }
 
 public class SecondOOPS {
-	
+
 	public static void main(String[] args) {
 		
-		Human inan = new Human();
+		Polo p = new Polo();
+		p.abs();
 		
-		int gymFee = inan.gyming();
-	
-		Society sf = new Society();
-		
-		System.out.println("The Society Fund righjt after innaugration "+sf.fund);
-		sf.fund = gymFee;
-		
-		System.out.println("The Society fund after Inan' gym fee computation "+sf.fund);
-		
-		System.out.println("After calling method "+inan.mascularStrength);
-		
-		Human stephen = new Human();
-		
-		int gymFee2 = stephen.gyming();
-		
-		sf.fund = sf.fund + gymFee2;
-		
-		System.out.println("The society fund after Stephen' fee calculated "+sf.fund);	
-	}	
+		p.i = 23;
+		p.j = 67;
+
+	}
 }
 
 
 
+//class Car {
+//
+//	void steeringWheel() {
+//		System.out.println("inside steering Wheel of Car...");
+//	}
+//}
+//
+//class Polo extends Car {
+//
+//	void abs() {
+//		System.out.println("inside abs of Polo..");
+//	}
+//}
+//
+//class Benz extends Car {
+//
+//	void climateControl() {
+//		System.out.println("inside climateControl of Benz..");
+//	}
+//}
+//
+//public class SecondOOPS {
+//
+//	public static void main(String[] args) {
+//
+//		Polo polo = new Polo();
+//
+//		polo.steeringWheel();
+//		polo.abs();
+//
+//		Benz benz = new Benz();
+//		benz.steeringWheel();
+//		benz.climateControl();
+//
+//	}
+//}
+
+//class Polo {
+//	
+//	void steeringWheel() {
+//		System.out.println("inside SteerinGwheel of Polo..");
+//	}
+//	void abs() {
+//		System.out.println("inside abs of Polo..");
+//	}
+//}
+//
+//class Benz {
+//	
+//	void steeringWheel() {
+//		System.out.println("inside SteerinGwheel of Polo..");
+//	}
+//	void climateControl() {
+//		System.out.println("inside climateControl of Benz..");
+//	}
+//}
+//
+//public class SecondOOPS {
+//	
+//	public static void main(String[] args) {
+//		
+//		Polo polo = new Polo();
+//		
+//		polo.steeringWheel();
+//		polo.abs();
+//		
+//		Benz benz = new Benz();
+//		benz.steeringWheel();
+//		benz.climateControl();
+//		
+//		
+//	}	
+//}
+
+//class Human {
+//	
+//	double gpsLocation = 50.65;
+//	int altitude;
+//	
+//	void walk() {
+//		gpsLocation = gpsLocation + 2.76;
+//	}
+//	
+//	void fly() {
+//	
+//		AirCraft cessna = new AirCraft();
+//		int altitudeLocation = cessna.flying();
+//		
+//		altitude =  altitude + altitudeLocation;
+//	}
+//}
+//
+//class AirCraft {
+//	
+//	int flying() {
+//		
+//		return 35000;
+//	}
+//}
+//
+//
+//public class SecondOOPS {
+//	
+//	public static void main(String[] args) {
+//		
+//		Human ali = new Human();
+//		
+//		System.out.println(ali.altitude);
+//		
+//		ali.fly();
+//		
+//		System.out.println(ali.altitude);
+//		
+//		
+//	}	
+//}
+
+//class Human {
+//	
+//	double gpsLocation = 50.65;
+//	
+//	void walk() {
+//		
+//		gpsLocation = gpsLocation + 2.2;
+//	}
+//	void driving() {
+//		
+//		Car car = new Car();
+//		
+//		double myLocation = car.drivingByCar();
+//		gpsLocation = gpsLocation + myLocation;			
+//	}
+//}
+//
+//class Car {
+//	
+//	double drivingByCar() {
+//		
+//		return 50.78;
+//	}
+//}
+//
+//public class SecondOOPS {
+//	
+//	public static void main(String[] args) {
+//		
+//		Human ali = new Human();
+//		
+//		ali.walk();
+//		
+//		ali.driving();
+//		
+//		System.out.println(ali.gpsLocation);
+//	}	
+//}
+
+//class Human {
+//	
+//	int iq = 10;
+//	double gpsLocation = 50.65;
+//	
+//	void studying() {
+//		iq++;
+//	}
+//	
+//	void travel() {
+//		
+//		gpsLocation = gpsLocation + 2.2;
+//	}		
+//}
+//
+//public class SecondOOPS {
+//	
+//	public static void main(String[] args) {
+//		
+//		Human ali = new Human();
+//		
+//		ali.studying();
+//		
+//		ali.travel();
+//		
+//		System.out.println(ali.iq);
+//		System.out.println(ali.gpsLocation);
+//		
+//	
+//	}	
+//}
+
+//class Human {
+//	
+//	int mascularStrength = 50;
+//	
+//	int gyming() {
+//		mascularStrength++;
+//
+//		if(mascularStrength > 55) {
+//			return 40;
+//		}
+//		else {
+//			return 50;
+//		}
+//	}		
+//}
+//
+//class Society {
+//	
+//	int fund;
+//	String name;
+//	String secretaryName;
+//}
+//
+//public class SecondOOPS {
+//	
+//	public static void main(String[] args) {
+//		
+//		Human inan = new Human();
+//		
+//		int gymFee = inan.gyming();
+//	
+//		Society sf = new Society();
+//		
+//		System.out.println("The Society Fund righjt after innaugration "+sf.fund);
+//		sf.fund = gymFee;
+//		
+//		System.out.println("The Society fund after Inan' gym fee computation "+sf.fund);
+//		
+//		System.out.println("After calling method "+inan.mascularStrength);
+//		
+//		Human stephen = new Human();
+//		
+//		int gymFee2 = stephen.gyming();
+//		
+//		sf.fund = sf.fund + gymFee2;
+//		
+//		System.out.println("The society fund after Stephen' fee calculated "+sf.fund);	
+//	}	
+//}
 
 //class Human {
 //	
@@ -86,7 +305,6 @@ public class SecondOOPS {
 //		System.out.println(inan.mascularStrength);
 //	}	
 //}
-
 
 //class Human {
 //	
@@ -146,14 +364,6 @@ public class SecondOOPS {
 //		System.out.println(david.height);
 //	}	
 //}
-
-
-
-
-
-
-
-
 
 //public class SecondOOPS {
 //	
