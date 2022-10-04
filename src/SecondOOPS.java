@@ -1,34 +1,110 @@
-class Car {
 
-	int i = 20;
 
-	void steeringWheel() {
-		System.out.println("inside steering Wheel of Car..."+i);
-	}
-}
 
-class Polo extends Car {
+//class Car {
+//
+//	void steeringWheel() {
+//		System.out.println("inside steering Wheel of Car...");
+//	}
+//}
+//
+//class Polo extends Car {
+//
+//	void abs() {
+//		System.out.println("inside abs of Polo..");
+//	}
+//	
+//}
+//
+//public class SecondOOPS {
+//
+//	public static void main(String[] args) {
+//		
+//		Polo p = new Polo();//Here, object of Polo class is held by the reference variable of Polo class
+//		
+//		Car c = new Car();
+//		
+//		SecondOOPS s = new SecondOOPS();
+//		
+//		Car c1 = new Polo();//Object of child class can be held by the reference variable of Parent class 
+//		
+//		Polo p1 = new Car();//This is illegal to have object of parent class held by the reference
+//							//variable of child class..
+//	}
+//}
 
-	int j = 10;
 
-	void abs() {
-		System.out.println("inside abs of Polo.."+i);
-		System.out.println(j);//You can use variables of parent class anywhere in the child class...
-	}
-}
+//---------------Below code is for method-overriding
+//overriding says, if you do not like any method of parent class the go for over-riding concept.
+//since by default, you inherit the methods or variables of parent class in child class. In order to not
+// inherit the method you do not like, create the same looking method in the child class such as 
+//method' name, its return type and its argument-list is as same as the method present in parent class
+//which you d not like...
 
-public class SecondOOPS {
+//class Car {
+//
+//	void steeringWheel() {
+//		System.out.println("inside steering Wheel of Car...");
+//	}
+//	void musicSystem() {
+//		System.out.println("inside music system of car...");
+//	}
+//}
+//
+//class Polo extends Car {
+//
+//	void abs() {
+//		System.out.println("inside abs of Polo..");
+//	}
+//	
+//	void musicSystem() {
+//		System.out.println("inside music system of Polo...");
+//	}
+//}
+//
+//public class SecondOOPS {
+//
+//	public static void main(String[] args) {
+//		
+//		Polo p = new Polo();
+//		p.abs();
+//		p.steeringWheel();       p.musicSystem();
+//	}
+//}
 
-	public static void main(String[] args) {
-		
-		Polo p = new Polo();
-		p.abs();
-		
-		p.i = 23;
-		p.j = 67;
 
-	}
-}
+
+//class Car {
+//
+//	int i = 20;
+//
+//	void steeringWheel() {
+//		System.out.println("inside steering Wheel of Car..."+i);
+//	}
+//}
+//
+//class Polo extends Car {
+//
+//	int j = 10;
+//
+//	void abs() {
+//		System.out.println("inside abs of Polo.."+i);
+//		System.out.println(j);//You can use variables of parent class anywhere in the child class...
+//	}
+//}
+//
+//public class SecondOOPS {
+//
+//	public static void main(String[] args) {
+//		
+//		Polo p = new Polo();
+//		p.abs();
+//		
+//		p.i = 23;
+//		p.j = 67;
+//
+//	}
+//}
 
 
 
