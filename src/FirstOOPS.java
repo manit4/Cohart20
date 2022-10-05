@@ -6,9 +6,9 @@ class Human1 {
 	
 	public static void main(String[] args) {
 		
-		Human h1 = new Human();
+		Human1 h1 = new Human1();
 		
-		Human h2 = new Human();
+		Human1 h2 = new Human1();
 		
 		add();
 			
