@@ -1,20 +1,24 @@
 class Car {
-	void steeringWheel(){
-		System.out.println("inside steering Wheel of car..");
+	
+	void steeringWheel() {//this is over-ridden method
+		System.out.println("hello steeringWheel from car");
 	}
 }
-
+//While over-riding, first check the method' access modifier which you are thinking of over-riding then 
+//make sure you can have the either same access modifier or less strict in the over-riding method(Child
+//class). For example, in parent class method' access modifier is default then you can have either
+//same default access modifier or protected or public in the over-riding method which is in child class..
+//Second example is, if you have protected access modifier in the parent class method then you can only
+//same access modifier which is protected or less strict than protected which is public...
+//So Private is the most strict then default is the second most strict then comes the protected and 
+// the last is public which is the weakest...
 class Polo extends Car {
 	
 	void abs() {
-		System.out.println("inside abs of Polo..");
+		System.out.println("hello abs from Polo");
 	}
-}
-
-class PoloGT extends Polo {
-	
-	void roadster() {
-		System.out.println("inside roadster of PoloGT..");
+	void steeringWheel() {//This is over-riding method
+		System.out.println("hello steeringWheel form Polo");
 	}
 }
 
@@ -23,24 +27,56 @@ class Main {
 	
 	public static void main(String[] args) {
 		
-		Polo p1 = new Polo();
-		Polo p2 = new Polo();
-		Polo p3 = new Polo();
-		Polo p4 = new Polo();
-		Polo p100 = new Polo();
-		Polo p101 = new Polo();
-		Polo p102 = new Polo();
+		Polo p = new Polo();
 		
-		PoloGT gt1 = new PoloGT();
-		PoloGT gt2 = new PoloGT();
-		
-		gt1.abs();      gt1.steeringWheel();     gt1.roadster();
-				
-		Car c = new PoloGT();//This is legal since I am holding hold the object of GrandChild in the reference variable of GrandParent
-		Polo p = new PoloGT();//This is also legal since I am holding the object of Child in the reference variable of Parent class 
-				
+		p.abs();         p.steeringWheel();
 	}
 }
+
+
+//class Car {
+//	void steeringWheel(){
+//		System.out.println("inside steering Wheel of car..");
+//	}
+//}
+//
+//class Polo extends Car {
+//	
+//	void abs() {
+//		System.out.println("inside abs of Polo..");
+//	}
+//}
+//
+//class PoloGT extends Polo {
+//	
+//	void roadster() {
+//		System.out.println("inside roadster of PoloGT..");
+//	}
+//}
+//
+//
+//class Main {
+//	
+//	public static void main(String[] args) {
+//		
+//		Polo p1 = new Polo();
+//		Polo p2 = new Polo();
+//		Polo p3 = new Polo();
+//		Polo p4 = new Polo();
+//		Polo p100 = new Polo();
+//		Polo p101 = new Polo();
+//		Polo p102 = new Polo();
+//		
+//		PoloGT gt1 = new PoloGT();
+//		PoloGT gt2 = new PoloGT();
+//		
+//		gt1.abs();      gt1.steeringWheel();     gt1.roadster();
+//				
+//		Car c = new PoloGT();//This is legal since I am holding hold the object of GrandChild in the reference variable of GrandParent
+//		Polo p = new PoloGT();//This is also legal since I am holding the object of Child in the reference variable of Parent class 
+//				
+//	}
+//}
 
 
 
